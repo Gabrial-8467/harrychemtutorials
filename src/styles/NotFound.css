@@ -1,0 +1,47 @@
+/* src/styles/NotFound.css */
+
+.notfound {
+    padding: 3rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .notfound-heading {
+    font-size: 3rem;
+    color: #ff6f00;
+    margin-bottom: 1rem;
+  }
+  
+  .notfound-message {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .notfound-return {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .home-link {
+    font-size: 1.3rem;
+    color: #ff6f00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .home-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .notfound-heading {
+      font-size: 2.5rem;
+    }
+  
+    .notfound-message {
+      font-size: 1.2rem;
+    }
+  }
+  

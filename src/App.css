@@ -1,0 +1,130 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Ensuring full height of the page */
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main layout: content fills the screen */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Main content area will grow */
+  .main-content {
+    flex: 1;
+  }
+  
+  /* Make sure body text looks consistent */
+  body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Add global styles for links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* For header/logo or any logo specific styles */
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f00;
+    text-transform: uppercase;
+  }
+ /* Base Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff6f00, #ff8f00);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+
+  /* Styling the body container with padding */
+  .container {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Flexbox layout for centering content in some sections */
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* For section headers */
+  h1, h2, h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Add padding to the body sections */
+  section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add some hover effects for interactivity */
+  a:hover {
+    color: #ff6f00;
+  }
+  
+  /* Responsive Styles for mobile-first design */
+  @media (max-width: 768px) {
+    .app-container {
+      padding: 1rem;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+  
+    section {
+      padding: 1rem;
+    }
+  
+    h1, h2, h3 {
+      font-size: 1.5rem;
+    }
+  
+    .container {
+      padding: 1rem;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  

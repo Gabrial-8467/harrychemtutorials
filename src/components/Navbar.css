@@ -1,0 +1,240 @@
+/* Base Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff6f00, #ff8f00);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+/* Logo Styles */
+.navbar-logo a {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  pointer-events: auto;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for logo with slight scale */
+.navbar-logo a:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.bar {
+  width: 26px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 4px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Transform bars on toggle */
+.change-bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change-bar2 {
+  opacity: 0;
+}
+
+.change-bar3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  transition: transform 0.3s ease-in-out;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.nav-links li a:hover {
+  color: #ffffff;
+  transform: scale(1.05); /* Slightly scale the text */
+}
+
+/* Animations for Link Hover */
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+/* On Hover, Animate the Line */
+.nav-links li a:hover::before {
+  width: 100%;
+}
+
+/* Animations for Link Hover - Fade-In */
+.nav-links li a {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+/* Responsive Design */
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 260px;
+    background-color: #ff6f00;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 2rem;
+    transition: right 0.4s ease-in-out, transform 0.4s ease-in-out;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+    transform: translateX(0);
+  }
+
+  .nav-links li a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero {
+    height: 60vh; /* Reduce height for mobile devices */
+  }
+
+  /* Navbar when scrolling */
+  .navbar.scroll-active {
+    background: rgba(255, 111, 0, 0.9);
+  }
+}
+
+/* Tablet Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+
+  .navbar-logo a {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    height: 80vh; /* Adjust height for tablets */
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-logo a {
+    font-size: 2rem;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Devices (1025px and above) */
+@media (min-width: 1025px) {
+  .navbar {
+    position: sticky;
+    top: 0; /* Keeps navbar sticky on scroll */
+  }
+
+  .nav-links {
+    gap: 2rem;
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .navbar-logo a {
+    font-size: 2.2rem;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    height: 100vh; /* Full height on desktop */
+  }
+}

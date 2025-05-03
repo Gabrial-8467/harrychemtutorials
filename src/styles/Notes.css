@@ -1,0 +1,76 @@
+/* src/styles/Notes.css */
+
+.notes {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .notes-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .notes-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #666;
+  }
+  
+  .notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .note-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .note-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .note-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .note-link {
+    font-size: 1.1rem;
+    color: #ff6f00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .note-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .notes-heading {
+      font-size: 2rem;
+    }
+  
+    .notes-description {
+      font-size: 1.1rem;
+    }
+  
+    .note-item {
+      padding: 1rem;
+    }
+  }
+  
